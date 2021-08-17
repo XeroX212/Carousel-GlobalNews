@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/32b0fe08-8e5c-4501-8188-f0e019e5b1e1/resourceGroups/GlobalNewsCarousel/providers/Microsoft.Web/sites/globalnew1",
+    "appService.deploySubpath": "."
 }

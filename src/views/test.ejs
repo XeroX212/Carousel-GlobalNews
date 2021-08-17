@@ -1,0 +1,169 @@
+<% if(articles != null) { %>
+                <% articles.forEach(function(article, index) { %>
+                    <a href="/article/<%- article.id %>" class="news__card">
+                        <img src="<%- article.thumbnail_url %>" alt="<%- article.title.rendered %>">
+                        <h2><%- article.title.rendered %></h2>
+                        <p><%- article.excerpt.rendered %></p>
+                    </a>
+                <% }) %>
+                <% } else { %>
+                    No posts found.
+                <% } %>
+
+                <% if (card.id === 1) { %>
+                    <%- card.id %>
+                    <!-- <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide <%- card.id %>"></button> -->
+                <% } else if (card.id > 1) { %> 
+                    <!-- <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<%- card.id %>" aria-label="Slide <%- card.id %>"></button> -->
+                <% } %>
+                ><%=  outputArray[0]['name'] %> <%= outputArray[0]['votes'] %>
+
+                <% //var outputArray = [];
+                                            // console.log(array.length)
+                                            //const array = []
+                                            //for(let i = 0; i < card.results.length; i++ ){
+                                              //  array[i] = card.results
+                                                // array.sort(function(a, b) { return b.votes - a.votes})
+                                              //  console.log(array)
+                                           // }
+                                            //card.results.forEach(function(array, index) {
+                                                // const array = card.results
+                                                // const simplifyArray = (array = []) => {
+                                                //     const res = [];
+                                                //     array.forEach(element => {
+                                                //         element.forEach(el => {
+                                                //             res.push(el);
+                                                //         });
+                                                //     });
+                                                //     return res;
+                                                //     };
+                                                    // console.log(simplifyArray())
+                                            //     for(let i = 0; i < card.results.length; i++ ){
+                                            //         var result = card.results
+                                            //         outputArray.push({  
+                                            //             name: result[i].name,
+                                            //             partyId: result.partyId,
+                                            //             votes: result.votes,
+                                            //             isElected: result.isElected,
+                                            //             partyCode: result.partyCode })
+                                            // }
+                                            //  console.log(outputArray)   
+                                            // var sort = function (index, array) {
+                                            //             // prop = prop.split('.');
+                                            //             var len = array.length;
+
+                                            //             array.sort(function (a, b) {
+                                            //                 var i = 0;
+                                            //                 while( i < len ) { a = a[prop[i]]; b = b[prop[i]]; i++; }
+                                            //                 // if (a < b) {
+                                            //                 //     return -1;
+                                            //                 // } else if (a > b) {
+                                            //                 //     return 1;
+                                            //                 // } else {
+                                            //                 //     return 0;
+                                            //                 // }
+                                            //                 return b.votes - a.votes
+                                            //             });
+                                            //             return array;
+                                            //         };
+                                            //         console.log(sort(array))
+                                            // outputArray += array.name
+                                                    // console.log(array[Object.keys(array)[2]])
+                                                // array.sort(function(a, b) {
+                                                //     return b.votes - a.votes;
+                                                // });
+                                                //var outputArray += array
+                                                // const outputArray = []
+                                                // // // console.log(card.results[Object.keys(card.results)[1]])
+                                                // for(let i = 0; i < index.length; i++ ){
+                                                    // outputArray[i] += array
+
+                                                // }
+                                                    // console.log(outputArray) 
+                                                
+                                                // console.log(card.results.length);
+                                                // for(let element in array){
+                                                //     outputArray.concat({  
+                                                //     name: array.name,
+                                                //     partyId: array.partyId,
+                                                //     votes: array.votes,
+                                                //     isElected: array.isElected,
+                                                //     partyCode: array.partyCode
+                                                // });
+                                                // }
+                                            // console.log(outputArray)
+                                            // console.log(array)
+                                            // var outputArray = [];  
+                                            //     for (let element in array) {  
+                                            //     outputArray.push({  
+                                            //         name: array.name,
+                                            //         partyId: array.partyId,
+                                            //         votes: array.votes,
+                                            //         isElected: array.isElected,
+                                            //         partyCode: array.partyCode
+                                            //     });  
+                                            // }
+                                                
+                                                //console.log(card[0].results)  
+                                            //     // outputArray.sort( function( a , b){
+                                            //     //     if(a > b) return 1;
+                                            //     //     if(a < b) return -1;
+                                            //     //     return 0;
+                                            //     // });
+                                            // console.log(outputArray)
+                                            //     // let scores = [
+                                            //     //     9, 80, 10, 20, 5, 70
+                                            //     // ];
+                                            //     // // descending order
+                                            //     // scores.sort((a, b) => b - a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <% //const array = cards[0].results
+                                // array += cards.results
+                                // console.log(array[0])
+                                // var test = [];
+                                // test[0] = cards[0].results.sort(function(a, b) {return b.votes - a.votes})
+                                // console.log(test[0][0].name)
+                            //     var data = [];
+                            // for(let i = 0; i < 10; i++ ){
+                            //     // console.log(cards[i].results)
+                            //     data += cards[i].results.sort(function(a, b) {return b.votes - a.votes})
+                            //     // console.log(cards[i].results.sort(function(a, b) {return b.votes - a.votes}))
+                                
+                            // } 
+                            //     console.log(data[5])
+                            
+                            %>
+                               <p><%= //elemt %></p>
+                                // console.log(sortarray)
+                            // array.sort(function(a, b) { return b.votes - a.votes })
+                            
+                            // console.log(array)
+
+                            //cards.forEach(function(card1, index1) {
+                              //  console.log(card1)
+                            //}) 
+                            <% %>
+
+                            //console.log()
+
+                                                
+                                                // console.log(arr[0].sort(function(a, b) {return b.votes - a.votes}));
+                                                // array[0][0].name
+                                                // console.log(card.results[0].sort(function(a, b) {return b.votes - a.votes}));
+                                                // array.forEach(function(arr, index) {
+                                                    // console.log(arr[0])
