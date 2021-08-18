@@ -20,24 +20,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
         </header>
         <main>
 
-            <div id="myCarousel" class="carousel slide" data-interval="false" data-bs-ride="carousel" data-pause="hover">
+            <div id="myCarousel" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" data-pause="hover">
                     <div class="carousel-indicators">
                         <% for(let i = 0; i < cards.length; i++ ){ %>
                             <% if (i === 0) { %>
@@ -87,13 +76,13 @@
                                                 <% } %>
                                                 </ul>
                                                 <div class="card-body">
-                                                    <span id="<%= res[0].partyCode %>-per"><%= res[0].partyCode %> <%= Math.round(res[0].votes/sum * 100) + "%" %></span>
-                                                    <span id="<%= res[1].partyCode %>-per"><%= res[1].partyCode %> <%= Math.round(res[1].votes/sum * 100) + "%" %></span>
-                                                    <span id="<%= res[2].partyCode %>-per"><%= res[2].partyCode %> <%= Math.round(res[2].votes/sum * 100) + "%" %></span>
+                                                    <span id="<%= res[0].partyCode %>-per"><strong><%= res[0].partyCode %> <%= Math.round(res[0].votes/sum * 100) + "%" %></strong></span>
+                                                    <span id="<%= res[1].partyCode %>-per"><strong><%= res[1].partyCode %> <%= Math.round(res[1].votes/sum * 100) + "%" %></strong></span>
+                                                    <span id="<%= res[2].partyCode %>-per"><strong><%= res[2].partyCode %> <%= Math.round(res[2].votes/sum * 100) + "%" %></strong></span>
                                                     <% //console.log(res.length)  %>
                                                     <% if(res.length > 3) { %>
                                                         <%= //res[3].votes %>
-                                                        <span id="<%= res[3].partyCode %>-per"><%= res[3].partyCode %> <%= Math.round(res[3].votes/sum * 100) + "%" %></span>
+                                                        <span id="<%= res[3].partyCode %>-per"><strong><%= res[3].partyCode %> <%= Math.round(res[3].votes/sum * 100) + "%" %></strong></span>
                                                     <% } %>
                                                 </div>
                                               </div>
