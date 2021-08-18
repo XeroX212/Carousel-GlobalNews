@@ -59,10 +59,8 @@
                                         %>
                                         <div class="carousel-caption text-start">
                                             <div class="card" style="width: 18rem;">
-                                                <!-- <img src="..." class="card-img-top" alt="..."> -->
                                                 <div class="card-body">
                                                     <h3 id="heading-card"><%- card.name %></h3>
-                                                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                                                 </div>
                                                 <ul class="list-group list-group-flush">
                                                 <%  let sum = 0 %>
@@ -79,9 +77,7 @@
                                                     <span id="<%= res[0].partyCode %>-per"><strong><%= res[0].partyCode %> <%= Math.round(res[0].votes/sum * 100) + "%" %></strong></span>
                                                     <span id="<%= res[1].partyCode %>-per"><strong><%= res[1].partyCode %> <%= Math.round(res[1].votes/sum * 100) + "%" %></strong></span>
                                                     <span id="<%= res[2].partyCode %>-per"><strong><%= res[2].partyCode %> <%= Math.round(res[2].votes/sum * 100) + "%" %></strong></span>
-                                                    <% //console.log(res.length)  %>
                                                     <% if(res.length > 3) { %>
-                                                        <%= //res[3].votes %>
                                                         <span id="<%= res[3].partyCode %>-per"><strong><%= res[3].partyCode %> <%= Math.round(res[3].votes/sum * 100) + "%" %></strong></span>
                                                     <% } %>
                                                 </div>
