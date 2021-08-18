@@ -5,7 +5,7 @@ languages:
 products:
 - azure
 - azure-app-service
-description: "This sample demonstrates a tiny Hello World Node.js app for Azure App Service."
+description: "This sample demonstrates a Global News Coding Exercise app for Azure App Service."
 ---
 
 # Node.js Global News Coding Exercise
