@@ -61,20 +61,42 @@
                                         <rect width="100%" height="100%" fill="#777" /></svg>
             
                                     <div class="container">
-                                        <div class="carousel-caption text-start">
-                                            <h1><%- card.name %></h1>
-                                            <%
+                                        <%
                                                 // sorting of results array's
                                                 var array = card.results 
                                                 var arr = [array]   // adding array to access the arrays
                                                 const res = arr[0].sort(function(a, b) {return b.votes - a.votes}) //sort function to array's
   
-                                            %>
-                                            
-                                            <% for(let i = 0; i < res.length; i++ ){ %>
-                                                   <p><%- res[i].name %> <%- res[i].votes %></p>
-                                           <% } %>
-                                            <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+                                        %>
+                                        <div class="carousel-caption text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                                                <div class="card-body">
+                                                    <h3 id="heading-card"><%- card.name %></h3>
+                                                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                <%  let sum = 0 %>
+                                                <% for(let i = 0; i < res.length; i++ ){ %>
+                                                    <% sum += parseInt(res[i].votes)%>
+                                                <li id="<%= res[i].partyCode %>" class="list-group-item"><%- res[i].name %>
+                                                    <ul>
+                                                        <li>Total Votes <%- res[i].votes %></li>
+                                                    </ul>
+                                                </li>
+                                                <% } %>
+                                                </ul>
+                                                <div class="card-body">
+                                                    <span id="<%= res[0].partyCode %>-per"><%= res[0].partyCode %> <%= Math.round(res[0].votes/sum * 100) + "%" %></span>
+                                                    <span id="<%= res[1].partyCode %>-per"><%= res[1].partyCode %> <%= Math.round(res[1].votes/sum * 100) + "%" %></span>
+                                                    <span id="<%= res[2].partyCode %>-per"><%= res[2].partyCode %> <%= Math.round(res[2].votes/sum * 100) + "%" %></span>
+                                                    <% //console.log(res.length)  %>
+                                                    <% if(res.length > 3) { %>
+                                                        <%= //res[3].votes %>
+                                                        <span id="<%= res[3].partyCode %>-per"><%= res[3].partyCode %> <%= Math.round(res[3].votes/sum * 100) + "%" %></span>
+                                                    <% } %>
+                                                </div>
+                                              </div>
                                         </div>
                                     </div>
                                 </div>

@@ -105,3 +105,56 @@ body {
         font-size: 3.5rem;
     }
 }
+
+#LIB {
+  background-color: #d71b1e;
+  color: white;
+}
+
+#NDP {
+  background-color: #f89921;
+  color: white;
+}
+
+#PC {
+  background-color: #1d4880;
+  color: white;
+}
+
+#GRN {
+  background-color: #3d9b35;
+  color: white;
+}
+
+#IND {
+  background-color: #aaa;
+
+}
+
+#heading-card {
+  color: black;
+}
+
+#LIB-per {
+  color: #d71b1e;
+}
+
+#NDP-per {
+  color: #f89921;
+  
+}
+
+#PC-per {
+  color: #1d4880;
+
+}
+
+#GRN-per {
+  color: #3d9b35;
+
+}
+
+#IND-per {
+  color: #aaa;
+
+}
